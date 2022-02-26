@@ -33,29 +33,67 @@
       <section class="secaoDetalhesConta">
         <div class="container">
           <div class="secaoDetalhesConta_sobreUsuario">
-            <img src="./assets/img/usuario.png" alt="Ícone do usúario" />
-            <p>Olá,<strong>@usuario</strong></p>
+            <div class="secaoDetalhesConta_sobreUsuario--nome">
+              <img src="./assets/img/usuario.png" alt="Ícone do usúario" />
+              <p>Olá,<strong>@Eduardo</strong></p>
+            </div>
+
+            <div class="secaoDetalhesConta_sobreUsuario--icones">
+              <img src="./assets/img/presente.png" alt="icone presente" />
+              <img src="./assets/img/chat.png" alt="icone chat" />
+            </div>
           </div>
 
           <div class="secaoDetalhesConta_sobreSaldo">
-            <p>Saldo picpay <strong>R$ 0,00</strong></p>
-            <button>Extrato</button>
+            <div>
+              <p>Saldo picpay</p>
+              <div class="secaoDetalhesConta_sobreSaldo--valor">
+                <p>R$ 0,00</p>
+                <img src="./assets/img/visualizar.png" alt="" />
+              </div>
+            </div>
+
+            <button id="btnExtrato">Extrato</button>
           </div>
+
           <ul class="secaoDetalhesConta_opcoesTransacoes">
-            <li class="secaoDetalhesConta_itemTransacao">
-              <img src="./assets/img/qrcode.png" alt="QR Code" />
+            <li
+              class="secaoDetalhesConta_itemTransacao secaoDetalhesConta_itemTransacao--qrCode"
+              id="1"
+            >
+              <figure>
+                <img src="./assets/img/qrcode.png" alt="QR Code" />
+              </figure>
               <p>QR Code</p>
             </li>
-            <li class="secaoDetalheConta_itemTransacao">
-              <img src="./assets/img/pix.png" alt="Pix" />
+            <li
+              class="secaoDetalhesConta_itemTransacao secaoDetalhesConta_itemTransacao--pix"
+              id="2"
+            >
+              <figure>
+                <img src="./assets/img/pix.png" alt="Pix" />
+              </figure>
+
               <p>Pix</p>
             </li>
-            <li class="secaoDetalheConta_itemTransacao">
-              <img src="./assets/img/codigo.png" alt="Boleto" />
+            <li
+              class="secaoDetalhesConta_itemTransacao secaoDetalhesConta_itemTransacao--boleto"
+              id="3"
+            >
+              <figure>
+                <img src="./assets/img/codigo.png" alt="Boleto" />
+              </figure>
+
               <p>Pagar Boleto</p>
             </li>
-            <li class="secaoDetalheConta_itemTransacao">
-              <img src="./assets/img/cobrar-icon.png" alt="Cobrar" />
+            <li
+              class="secaoDetalhesConta_itemTransacao secaoDetalhesConta_itemTransacao--cobrar"
+              id="4"
+            >
+              <figure>
+                <img src="./assets/img/cobrar-icon.png" alt="Cobrar" />
+              </figure>
+
               <p>Cobrar</p>
             </li>
           </ul>
@@ -66,20 +104,20 @@
         <!-- div geral -->
         <div class="container">
           <!-- div selecione formas de pagamento -->
-          <div class="secaoTransacao_avisoSelecao">
+          <div class="secaoTransacao_avisoSelecao mostrar">
             <p>selecione a forma de pagamento</p>
             <img src="./assets/img/banner.png" alt="banner picpay" />
           </div>
 
           <!--  div do qrcode -->
-          <div class="secaoTransacao_qrCode">
+          <div data-id="1" class="secaoTransacao_qrCode">
             <img src="./assets/img/qrcode-imagem.png" alt="imagem qr code" />
             <p>@usuario</p>
             <button>Cobre um amigo</button>
             <a href="">Compartilhar meu código</a>
           </div>
           <!-- div do pix -->
-          <div class="secaoTransacao_pix">
+          <div data-id="2" class="secaoTransacao_pix">
             <img src="./assets/img/pix-logo.png" alt="Pix logo" />
             <div class="secaoTransacao_boxOpcao">
               <img src="./assets/img/pix1.png" alt="" />
@@ -91,7 +129,7 @@
             </div>
           </div>
           <!-- div do boleto -->
-          <div class="secaoTransacao_boleto">
+          <div data-id="3" class="secaoTransacao_boleto">
             <img src="./assets/img/boleto.png" alt="Image boleto" />
             <h2>pagar com o código de barra</h2>
             <p>
@@ -101,7 +139,7 @@
             <input type="text" placeholder="Insira o código de barras" />
           </div>
           <!-- div de cobrar -->
-          <div class="secaoTransacao_cobrar">
+          <div data-id="4" class="secaoTransacao_cobrar">
             <img src="./assets/img/cobrar.png" alt="Icone cobrar" />
             <h2>Cobrar</h2>
             <p>Divida a conta dos amigos de forma fácil</p>
@@ -160,5 +198,6 @@
         </div>
       </footer>
     </main>
+    <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
